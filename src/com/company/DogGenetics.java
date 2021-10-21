@@ -16,8 +16,8 @@ public class DogGenetics {
     };
 
     public static ArrayList<Integer> getRandomPercentage() {
-        ArrayList<Double> array_double = new ArrayList<Double>();
-        ArrayList<Integer> array_int = new ArrayList<Integer>();
+        ArrayList<Double> array_double = new ArrayList<>();
+        ArrayList<Integer> array_int = new ArrayList<>();
         double sum = 0;
         int sum_of_array = 0;
         for (int i = 0; i < MAX_BREEDS; i++) {
@@ -46,7 +46,7 @@ public class DogGenetics {
     }
 
     public static Integer[] getRandomBreedsIndex() {
-        Set<Integer> random_index_set = new LinkedHashSet<Integer>();
+        Set<Integer> random_index_set = new LinkedHashSet<>();
         while (random_index_set.size() < MAX_BREEDS) {
             Integer next = rand.nextInt(breeds_of_dogs.length);
             random_index_set.add(next);
@@ -64,12 +64,8 @@ public class DogGenetics {
             int index = randomBreedIndex[i];
             System.out.println(randomPercentage.get(i)+"% "+breeds_of_dogs[index]);
         }
-//        System.out.println(breeds_with_percentages);
     }
 
-    /*hMapNumbers.entrySet().forEach( entry -> {
-            System.out.println( entry.getKey() + " => " + entry.getValue() );
-        });*/
     public static void makeReport() {
         getAndPrintName();
         printBackground();
